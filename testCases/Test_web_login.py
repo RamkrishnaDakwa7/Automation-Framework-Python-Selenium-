@@ -40,6 +40,7 @@ class TestCaseLogin:
         self.lp.setPassword(loading_yaml_userPassword)
         self.lp.clickLoginButton()
         act_title=self.driver.title
+        self.driver.close()
         if act_title=="Dashboard / nopCommerce administration":
             assert True
         else:
